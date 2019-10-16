@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>CSS Test: The 'border-image-width' property with 'auto' as a value</title>
+        <link rel="author" title="Microsoft" href="http://www.microsoft.com/" />
+        <link rel="help" href="http://www.w3.org/TR/css3-background/#the-border-image-slice" />
+        <meta name="flags" content="image" />
+        <meta name="assert" content="This test checks that if 'auto' is specified then the border image width is the intrinsic width or height (whichever is applicable) of the corresponding image slice." />
+        <style type="text/css">
+            #test
+            {
+                background-color:red;
+                border: 10px double red;
+                border-image-slice: 20 40;
+                border-image-source: url("support/green_color.png");
+                border-image-width: auto;
+                height: 200px;
+                margin: 50px;
+                width: 200px;
+            }
+            div div
+            {
+                background-color: lime;
+                height: 180px;
+                margin: 10px 30px;
+                width: 140px;
+            }
+        </style>
+    </head>
+    <body>
+        <p>Test passes if there is a lime rectangle inside green square and no red color visible on the page.</p>
+        <div id="test">
+            <div></div>
+        </div>
+    </body>
+</html>

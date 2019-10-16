@@ -1,0 +1,4 @@
+﻿#target {
+    --reg-utf16be-url: url(æøåの.jpg);
+    --reg-utf16be-func: url("æøåの.jpg");
+}

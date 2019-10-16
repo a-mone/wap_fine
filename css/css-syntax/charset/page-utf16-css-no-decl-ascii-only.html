@@ -1,0 +1,16 @@
+﻿<!doctype html>
+<title>CSS charset: page utf-16, CSS no decl (ASCII only)</title>
+<link rel=help href="https://drafts.csswg.org/css-syntax-3/#determine-the-fallback-encoding">
+<script src="/resources/testharness.js" charset=utf-8></script>
+<script src="/resources/testharnessreport.js" charset=utf-8></script>
+<link rel=stylesheet href="support/no-decl.css">
+<div id=log></div>
+<div id=foo></div>
+<script>
+var elm = document.getElementById('foo');
+var t = async_test();
+onload = t.step_func(function(){
+  assert_equals(getComputedStyle(elm, '').visibility, 'visible');
+  this.done();
+});
+</script>

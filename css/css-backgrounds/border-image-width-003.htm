@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>CSS Test: The 'border-image-width' property with two values given in percentage</title>
+        <link rel="author" title="Microsoft" href="http://www.microsoft.com/" />
+        <link rel="help" href="http://www.w3.org/TR/css3-background/#the-border-image-width" />
+        <meta name="flags" content="image" />
+        <meta name="assert" content="This test checks that percentages in 'border-image-width' property refer to the size of the border image area: the width of the area for horizontal offsets, the height for vertical offsets. The offsets represent inward distances from the top, right, bottom, and left sides of the area, respectively." />
+        <style type="text/css">
+           #test
+            {
+                background-color:red;
+                border: 10px double red;
+                border-image-slice: 10;
+                border-image-source: url("support/green_color.png");
+                border-image-width: 20% 10%;
+                height: 230px;
+                margin: 50px;
+                width: 180px;
+            }
+            div div
+            {
+                background-color: lime;
+                height: 150px;
+                margin: 40px 10px;
+                width: 160px;
+            }
+        </style>
+    </head>
+    <body>
+        <p>Test passes if there is a lime rectangle inside green square and no red color visible on the page.</p>
+        <div id="test">
+            <div></div>
+        </div>
+    </body>
+</html>

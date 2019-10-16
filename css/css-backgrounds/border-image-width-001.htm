@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>CSS Test: The 'border-image-width' property with four numbers as a value</title>
+        <link rel="author" title="Microsoft" href="http://www.microsoft.com/" />
+        <link rel="help" href="http://www.w3.org/TR/css3-background/#the-border-image-width" />
+        <meta name="flags" content="image" />
+        <meta name="assert" content="This test checks that four numbers as a value of 'border-image-width' specify offsets that are used to divide the border image area into nine parts. They represent inward distances from the top, right, bottom, and left sides of the border image area. Numbers represent multiples of the corresponding computed border-width." />
+        <style type="text/css">        
+            #test
+            {
+                background-color:red;
+                border: 10px double red;
+                border-image-slice: 10;
+                border-image-source: url("support/green_color.png");
+                border-image-width: 5 4 3 2;
+                height: 200px;
+                margin: 50px;
+                width: 200px;
+            }
+            div div
+            {
+                background-color: lime;
+                height: 140px;
+                margin: 40px 10px;
+                width: 160px;
+            }
+        </style>
+    </head>
+    <body>
+        <p>Test passes if there is a lime rectangle inside green square and no red visible on the page.</p>
+        <div id="test">
+            <div></div>
+        </div>
+    </body>
+</html>

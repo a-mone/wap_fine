@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="UTF-32BE"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" data-parsed="yes">
+<head><title>sample file</title></head>
+<body>
+ <p>This is a sample file encoded in one of the UTF-32 variants.</p>
+</body>
+</html>

@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>CSS Test: The 'border-image-width' property with two values given in pixel units</title>
+        <link rel="author" title="Microsoft" href="http://www.microsoft.com/" />
+        <link rel="help" href="http://www.w3.org/TR/css3-background/#the-border-image-width" />
+        <meta name="flags" content="image" />
+        <meta name="assert" content="This test checks that if the third and fourth values in 'border-image-width' property used for inward distances (offsets) from bottom and left sides of the area respectively are not explicitly specified, then bottom offset is the same as the top offset and left offset is the same as right one." />
+        <style type="text/css">
+            #test
+            {
+                background-color: red;
+                border: 10px double red;
+                border-image-slice: 10;
+                border-image-source: url("support/green_color.png");
+                border-image-width: 50px 10px;
+                height: 200px;
+                margin: 50px;
+                width: 200px;
+            }
+            div div
+            {
+                background-color: lime;
+                height: 120px;
+                margin: 40px 0px;
+                width: 200px;
+            }
+        </style>
+    </head>
+    <body>
+        <p>Test passes if there is a lime rectangle inside green square and no red color visible on the page.</p>
+        <div id="test">
+            <div></div>
+        </div>
+    </body>
+</html>
